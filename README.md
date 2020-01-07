@@ -31,10 +31,15 @@ After completing the tasks, please provide us with:
 ```sh
 $ git clone https://github.com/degawl/HelmesTest.git
 $ cd HelmesTest
-Add your environment variables to .env (Example .env file provided)
+Create file name .env or rename .env.example to .env
+Add your environment variables to .env
     DB_DATABASE=*****
     DB_USERNAME=*****
     DB_PASSWORD=*****
+If you are using a remote DB:
+    DB_HOST=******
+$ php artisan key:generate
+$ composer update
 $ composer dump-autoload
 $ php artisan migrate:fresh
 $ php artisan db:seed
@@ -43,8 +48,7 @@ $ php artisan serve
 
 ## Usage
 
-After migrating the database, seeding the sectors table and starting the server you
-you can now access the application at your localhost.
+After migrating the database, seeding the sectors table and starting the server you can now access the application at your localhost.
 
 Creating a user is required.
 After creating a user you may login using either you registered email or username.
