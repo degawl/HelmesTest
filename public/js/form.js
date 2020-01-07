@@ -4,6 +4,11 @@ $(document).ready(function() {
         placeholder: 'Select up to 5 options',
         maximumSelectionLength: 5,
         width: 'auto',
-        allowClear: true
+    });
+
+    $('#saved-sectors').select2({
+        theme: 'bootstrap',
+        placeholder: 'No options yet',
+        width: 'auto'
     });
 });
