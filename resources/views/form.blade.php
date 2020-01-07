@@ -46,7 +46,7 @@
                             </select>
                         </div>
                         <div class="form-group custom-control custom-checkbox mb-4">
-                            <input name="agreement_to_terms" type="checkbox" class="custom-control-input" id="customCheck1">
+                            <input name="agreementToTerms" type="checkbox" class="custom-control-input" id="customCheck1">
                             <label class="custom-control-label" for="customCheck1">Do you agree to the terms?</label>
                         </div>
                         
