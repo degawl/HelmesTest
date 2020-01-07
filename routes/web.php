@@ -14,6 +14,7 @@ use Illuminate\Auth\Middleware\Authenticate;
 */
 
 Route::get('/', 'FormController@populateFormInputs')->middleware('auth');
+Route::get('/logout')->middleware('auth');
 
 Auth::routes();
 
