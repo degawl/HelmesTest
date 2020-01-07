@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use Auth;
 use App\User;
 use App\Sector;
-
 use Illuminate\Support\Facades\DB;
 
 class FormController extends Controller
