@@ -51,10 +51,11 @@ class FormController extends Controller
 
     /**
      * Update user table with data from form
-     *
+     * @param User $user
+     * @param Request $req
      * @return void
      */
-    public function updateUser($user, $req)
+    public function updateUser(User $user, Request $req)
     {
         $user->name = $req->name;
         $updateDetails = ['name' => $req->name, 'agreement_to_terms' => 1];
@@ -64,10 +65,13 @@ class FormController extends Controller
 
     /**
      * Add data to user_serctors table with data from form
-     *
+     * 
+     * @param User $user
+     * @param Request $req
+     * 
      * @return void
      */
-    public function addUserSectors($user, $req)
+    public function addUserSectors(User $user, Request $req)
     {
         foreach ($req->sectors as $sector_id) 
         {
@@ -81,10 +85,12 @@ class FormController extends Controller
 
     /**
      * Delete all sectors connected to user
+     * 
+     * @param User $user
      *
      * @return void
      */
-    public function deleteUserSectors($user)
+    public function deleteUserSectors(User $user)
     {
         DB::table('user_sectors')->where('username', $user->username)->delete();
     }
@@ -92,10 +98,12 @@ class FormController extends Controller
 
     /**
      * Check if the user already has selected sectors in DB
+     * 
+     * @param User $user
      *
      * @return boolean
      */
-    public function userHasSectors($user)
+    public function userHasSectors(User $user)
     {
         return !empty(DB::table('user_sectors')->where('username', $user->username));
     }
@@ -103,6 +111,8 @@ class FormController extends Controller
 
     /**
      * Submit all data from form to databases.
+     * 
+     * @param Request $req
      *
      * @return Response
      */
