@@ -1,5 +1,7 @@
 <?php
 
+
+use Illuminate\Auth\Middleware\Authenticate;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,10 +13,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'FormController@populateFormInputs')->middleware('auth');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/form', 'FormController@populateFormInputs')->middleware('auth');
+
+Route::post('/submitform', 'FormController@submitForm')->middleware('auth');
+
