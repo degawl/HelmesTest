@@ -58,7 +58,7 @@ class FormController extends Controller
     public function updateUser($user, $req)
     {
         $user->name = $req->name;
-        $updateDetails = ['name' => $req->name, 'agreementToTerms' => 1];
+        $updateDetails = ['name' => $req->name, 'agreement_to_terms' => 1];
         User::where('username', $user->username)->update($updateDetails);
     }
 
@@ -112,7 +112,7 @@ class FormController extends Controller
         $req->validate([
             'name' => 'required',
             'sectors' => 'required',
-            'agreementToTerms' => 'required'
+            'agreement_to_terms' => 'required'
         ]);
 
         $user = Auth::user();
