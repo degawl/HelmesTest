@@ -12,4 +12,13 @@ class Sector extends Model
     {
         return $this->belongsTo(Sector::class);
     }
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'sector_name', 'sector_id' 
+    ];
 }

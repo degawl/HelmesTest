@@ -38,8 +38,8 @@ Add your environment variables to .env
     DB_PASSWORD=*****
 If you are using a remote DB:
     DB_HOST=******
-$ php artisan key:generate
 $ composer update
+$ php artisan key:generate
 $ composer dump-autoload
 $ php artisan migrate:fresh
 $ php artisan db:seed
