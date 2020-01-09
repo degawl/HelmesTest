@@ -36,6 +36,7 @@ Add your environment variables to .env
     DB_DATABASE=*****
     DB_USERNAME=*****
     DB_PASSWORD=*****
+    DB_PORT=*****
 If you are using a remote DB:
     DB_HOST=******
 $ composer update
