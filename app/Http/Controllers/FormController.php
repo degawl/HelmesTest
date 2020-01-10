@@ -133,6 +133,6 @@ class FormController extends Controller
         }
 
         $this->addUserSectors($user, $req);
-        return redirect()->action('FormController@populateFormInputs')->with('message', 'Your data has been saved.');
+        return redirect()->action('FormController@populateFormInputs')->with('message', 'Your data has been updated.');
     }
 }
